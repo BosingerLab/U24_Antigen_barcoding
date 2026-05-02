@@ -7,7 +7,9 @@ library(patchwork)
 library(ggbeeswarm)
 library(tidyverse)
 
-install.packages("tidyverse")
+# install.packages("tidyverse")
+
+setwd("/data/runs/Analysis_BLab/U24_Chris/Analysis/clonal_analysis/ag_sp/SHM/IgBLAST/makedb")
 
 db <- read.table("All.DB_db-pass.tab", header = T, sep="\t")
 dim(db)
@@ -33,7 +35,8 @@ head(mut)
 
 
 
-cloneid <- read.table("Clone_CellID", header = F,sep="\t")
+# cloneid <- read.table("Clone_CellID", header = F,sep="\t")
+cloneid <- read.table("Clone_CellID_85thr", header = F,sep="\t")
 names(cloneid) <- c("CloneID","ContigID")
 cloneid$CellID <- paste0(gsub("_\\d+","",cloneid$CloneID),"_",gsub("_contig.*","",cloneid$ContigID))
 head(cloneid)
@@ -55,14 +58,6 @@ head(mut_avg)
 write.table(file = "SHM_Vregion_beforeCDR3_cells.txt",mut_cloneid,sep="\t", quote = F)
 
 write.table(file = "SHM_V_region_beforeCDR3_avgclone.txt",mut_avg,sep="\t", quote = F)
-
-
-# 275-25 - #705AA6
-# RHe16 - #5182C3
-# RIr15 - #5DBF89
-# RLk15 - #243066
-# RUp16 - #004243
-# Rys15 - #F073AC
 
 #mut_cloneid <- read.table("SHM_Vregion_beforeCDR3_cells.txt")
 #mut_avg <- read.table("SHM_V_region_beforeCDR3_avgclone.txt")
