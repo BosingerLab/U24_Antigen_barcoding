@@ -17,12 +17,13 @@ blank_theme <- theme_minimal()+
     panel.grid.minor.x = element_blank(),
     axis.ticks = element_blank(),
     axis.text.x=element_blank(),
-    plot.title=element_text(size=14, face="bold"),
+    plot.title=element_text(size=10, face="bold"),
     legend.position="none"
   )
 
 
-files <- list.files(path = ".","*.txt")
+# files <- list.files(path = ".","*.txt")
+files <- list.files(path = ".","_clones_0.85.txt")
 files
 
 
