@@ -4,7 +4,8 @@ library(ggrepel)
 library(ggpubr)
 library(patchwork)
 
-setwd("/data/runs/Analysis_BLab/UM1/Analysis/Overlap/scPB_scMemory/Clones_MB/add_pb_cloneid/sorted")
+#setwd("/data/runs/Analysis_BLab/UM1/Analysis/Overlap/scPB_scMemory/Clones_MB/add_pb_cloneid/sorted")
+setwd("/data/runs/Analysis_BLab/UM1/Analysis/Overlap/scPB_scMemorywithneg/Clones_MB_85thr/add_pb_cloneid/sorted/Ag_specific")
 
 blank_theme <- theme_minimal()+
   theme(
